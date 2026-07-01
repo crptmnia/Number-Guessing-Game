@@ -1,3 +1,3 @@
 #!/bin/bash
 
-# Number Guessing Game Script
+# The Number Guessing Game Script
