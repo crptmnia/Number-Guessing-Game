@@ -85,10 +85,36 @@ ALTER SEQUENCE public.games_game_id_seq OWNED BY public.games.game_id;
 --
 
 CREATE TABLE public.guesses (
+    guess_id integer NOT NULL,
+    game_id integer,
+    guess_value integer,
+    hint character varying(75)
 );
 
 
 ALTER TABLE public.guesses OWNER TO freecodecamp;
+
+--
+-- Name: guesses_guess_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
+--
+
+CREATE SEQUENCE public.guesses_guess_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.guesses_guess_id_seq OWNER TO freecodecamp;
+
+--
+-- Name: guesses_guess_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
+--
+
+ALTER SEQUENCE public.guesses_guess_id_seq OWNED BY public.guesses.guess_id;
+
 
 --
 -- Name: users; Type: TABLE; Schema: public; Owner: freecodecamp
@@ -132,6 +158,13 @@ ALTER TABLE ONLY public.games ALTER COLUMN game_id SET DEFAULT nextval('public.g
 
 
 --
+-- Name: guesses guess_id; Type: DEFAULT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.guesses ALTER COLUMN guess_id SET DEFAULT nextval('public.guesses_guess_id_seq'::regclass);
+
+
+--
 -- Name: users user_id; Type: DEFAULT; Schema: public; Owner: freecodecamp
 --
 
@@ -164,6 +197,13 @@ SELECT pg_catalog.setval('public.games_game_id_seq', 1, false);
 
 
 --
+-- Name: guesses_guess_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
+--
+
+SELECT pg_catalog.setval('public.guesses_guess_id_seq', 1, false);
+
+
+--
 -- Name: users_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
@@ -176,6 +216,14 @@ SELECT pg_catalog.setval('public.users_user_id_seq', 1, false);
 
 ALTER TABLE ONLY public.games
     ADD CONSTRAINT games_pkey PRIMARY KEY (game_id);
+
+
+--
+-- Name: guesses guesses_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.guesses
+    ADD CONSTRAINT guesses_pkey PRIMARY KEY (guess_id);
 
 
 --
@@ -192,6 +240,14 @@ ALTER TABLE ONLY public.users
 
 ALTER TABLE ONLY public.users
     ADD CONSTRAINT users_username_key UNIQUE (username);
+
+
+--
+-- Name: guesses fk_game; Type: FK CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.guesses
+    ADD CONSTRAINT fk_game FOREIGN KEY (game_id) REFERENCES public.games(game_id);
 
 
 --
