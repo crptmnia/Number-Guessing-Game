@@ -122,7 +122,7 @@ ALTER SEQUENCE public.guesses_guess_id_seq OWNED BY public.guesses.guess_id;
 
 CREATE TABLE public.users (
     user_id integer NOT NULL,
-    username character varying(50)
+    username character varying(22)
 );
 
 
@@ -187,6 +187,7 @@ ALTER TABLE ONLY public.users ALTER COLUMN user_id SET DEFAULT nextval('public.u
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.users VALUES (1, 'user_1783000423514');
 
 
 --
@@ -207,7 +208,7 @@ SELECT pg_catalog.setval('public.guesses_guess_id_seq', 1, false);
 -- Name: users_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.users_user_id_seq', 1, false);
+SELECT pg_catalog.setval('public.users_user_id_seq', 1, true);
 
 
 --
