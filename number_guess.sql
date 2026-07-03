@@ -187,7 +187,24 @@ ALTER TABLE ONLY public.users ALTER COLUMN user_id SET DEFAULT nextval('public.u
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.users VALUES (1, 'user_1783000423514');
+INSERT INTO public.users VALUES (1, 'Jasper');
+INSERT INTO public.users VALUES (2, 'user_1783080868868');
+INSERT INTO public.users VALUES (3, 'user_1783080868867');
+INSERT INTO public.users VALUES (4, 'user_1783080982885');
+INSERT INTO public.users VALUES (5, 'user_1783080982884');
+INSERT INTO public.users VALUES (6, 'user_1783081000506');
+INSERT INTO public.users VALUES (7, 'user_1783081000505');
+INSERT INTO public.users VALUES (8, 'user_1783081009321');
+INSERT INTO public.users VALUES (9, 'user_1783081009320');
+INSERT INTO public.users VALUES (10, 'user_1783081019277');
+INSERT INTO public.users VALUES (11, 'user_1783081019276');
+INSERT INTO public.users VALUES (12, 'Anthony');
+INSERT INTO public.users VALUES (13, 'user_1783081039873');
+INSERT INTO public.users VALUES (14, 'user_1783081039872');
+INSERT INTO public.users VALUES (15, 'user_1783081621549');
+INSERT INTO public.users VALUES (16, 'user_1783081621548');
+INSERT INTO public.users VALUES (17, 'user_1783081795150');
+INSERT INTO public.users VALUES (18, 'user_1783081795149');
 
 
 --
@@ -208,7 +225,7 @@ SELECT pg_catalog.setval('public.guesses_guess_id_seq', 1, false);
 -- Name: users_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.users_user_id_seq', 1, true);
+SELECT pg_catalog.setval('public.users_user_id_seq', 18, true);
 
 
 --
