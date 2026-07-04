@@ -10,7 +10,7 @@ USER_ID=$($PSQL "SELECT user_id FROM users WHERE username='$USERNAME'")
 if [[ -z $USER_ID ]]
 then
   echo "Welcome, $USERNAME! It looks like this is your first time here."
-  $PSQL "INSERT INTO users(username) VALUES('$USERNAME')"
+  $PSQL "INSERT INTO users(username) VALUES('$USERNAME')"  > /dev/null
   USER_ID=$($PSQL "SELECT user_id FROM users WHERE username='$USERNAME'")
 else
   GAMES_PLAYED=$($PSQL "SELECT COUNT(*) FROM games WHERE user_id=$USER_ID")
@@ -20,6 +20,7 @@ fi
 
 SECRET=$((1 + $RANDOM % 1000))
 TRIES=0
+
 echo "Guess the secret number between 1 and 1000:"
 
 while true
@@ -37,7 +38,7 @@ do
   if [[ $GUESS -eq $SECRET ]]
   then
     echo "You guessed it in $TRIES tries. The secret number was $SECRET. Nice job!"
-    $PSQL "INSERT INTO games(user_id, attempts) VALUES($USER_ID, $TRIES)"
+    $PSQL "INSERT INTO games(user_id, attempts) VALUES($USER_ID, $TRIES)"  > /dev/null
     break
   elif [[ $GUESS -lt $SECRET ]]
   then

@@ -196,6 +196,35 @@ INSERT INTO public.games VALUES (20, 7, 761);
 INSERT INTO public.games VALUES (21, 6, 380);
 INSERT INTO public.games VALUES (22, 6, 673);
 INSERT INTO public.games VALUES (23, 6, 196);
+INSERT INTO public.games VALUES (24, 8, 993);
+INSERT INTO public.games VALUES (25, 8, 931);
+INSERT INTO public.games VALUES (26, 9, 237);
+INSERT INTO public.games VALUES (27, 9, 176);
+INSERT INTO public.games VALUES (28, 8, 571);
+INSERT INTO public.games VALUES (29, 8, 416);
+INSERT INTO public.games VALUES (30, 8, 366);
+INSERT INTO public.games VALUES (31, 10, 363);
+INSERT INTO public.games VALUES (32, 10, 151);
+INSERT INTO public.games VALUES (33, 11, 419);
+INSERT INTO public.games VALUES (34, 11, 353);
+INSERT INTO public.games VALUES (35, 10, 559);
+INSERT INTO public.games VALUES (36, 10, 675);
+INSERT INTO public.games VALUES (37, 10, 574);
+INSERT INTO public.games VALUES (38, 1, 22);
+INSERT INTO public.games VALUES (39, 12, 979);
+INSERT INTO public.games VALUES (40, 12, 581);
+INSERT INTO public.games VALUES (41, 13, 422);
+INSERT INTO public.games VALUES (42, 13, 219);
+INSERT INTO public.games VALUES (43, 12, 310);
+INSERT INTO public.games VALUES (44, 12, 414);
+INSERT INTO public.games VALUES (45, 12, 380);
+INSERT INTO public.games VALUES (46, 14, 373);
+INSERT INTO public.games VALUES (47, 14, 615);
+INSERT INTO public.games VALUES (48, 15, 185);
+INSERT INTO public.games VALUES (49, 15, 781);
+INSERT INTO public.games VALUES (50, 14, 248);
+INSERT INTO public.games VALUES (51, 14, 520);
+INSERT INTO public.games VALUES (52, 14, 412);
 
 
 --
@@ -215,13 +244,21 @@ INSERT INTO public.users VALUES (4, 'user_1783128196874');
 INSERT INTO public.users VALUES (5, 'user_1783128196873');
 INSERT INTO public.users VALUES (6, 'user_1783128396806');
 INSERT INTO public.users VALUES (7, 'user_1783128396805');
+INSERT INTO public.users VALUES (8, 'user_1783128760709');
+INSERT INTO public.users VALUES (9, 'user_1783128760708');
+INSERT INTO public.users VALUES (10, 'user_1783128827719');
+INSERT INTO public.users VALUES (11, 'user_1783128827717');
+INSERT INTO public.users VALUES (12, 'user_1783128934501');
+INSERT INTO public.users VALUES (13, 'user_1783128934500');
+INSERT INTO public.users VALUES (14, 'user_1783129394037');
+INSERT INTO public.users VALUES (15, 'user_1783129394036');
 
 
 --
 -- Name: games_game_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.games_game_id_seq', 23, true);
+SELECT pg_catalog.setval('public.games_game_id_seq', 52, true);
 
 
 --
@@ -235,7 +272,7 @@ SELECT pg_catalog.setval('public.guesses_guess_id_seq', 1, false);
 -- Name: users_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.users_user_id_seq', 7, true);
+SELECT pg_catalog.setval('public.users_user_id_seq', 15, true);
 
 
 --
