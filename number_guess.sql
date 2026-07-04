@@ -50,9 +50,7 @@ SET default_table_access_method = heap;
 CREATE TABLE public.games (
     game_id integer NOT NULL,
     user_id integer,
-    target_number integer,
-    attempts integer,
-    completed boolean
+    attempts integer
 );
 
 
@@ -175,7 +173,29 @@ ALTER TABLE ONLY public.users ALTER COLUMN user_id SET DEFAULT nextval('public.u
 -- Data for Name: games; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.games VALUES (1, 1, NULL, 165, NULL);
+INSERT INTO public.games VALUES (1, 1, 9);
+INSERT INTO public.games VALUES (2, 2, 188);
+INSERT INTO public.games VALUES (3, 2, 302);
+INSERT INTO public.games VALUES (4, 3, 819);
+INSERT INTO public.games VALUES (5, 3, 698);
+INSERT INTO public.games VALUES (6, 2, 921);
+INSERT INTO public.games VALUES (7, 2, 31);
+INSERT INTO public.games VALUES (8, 2, 654);
+INSERT INTO public.games VALUES (9, 1, 13);
+INSERT INTO public.games VALUES (10, 4, 168);
+INSERT INTO public.games VALUES (11, 4, 172);
+INSERT INTO public.games VALUES (12, 5, 120);
+INSERT INTO public.games VALUES (13, 5, 6);
+INSERT INTO public.games VALUES (14, 4, 154);
+INSERT INTO public.games VALUES (15, 4, 738);
+INSERT INTO public.games VALUES (16, 4, 777);
+INSERT INTO public.games VALUES (17, 6, 864);
+INSERT INTO public.games VALUES (18, 6, 133);
+INSERT INTO public.games VALUES (19, 7, 137);
+INSERT INTO public.games VALUES (20, 7, 761);
+INSERT INTO public.games VALUES (21, 6, 380);
+INSERT INTO public.games VALUES (22, 6, 673);
+INSERT INTO public.games VALUES (23, 6, 196);
 
 
 --
@@ -188,14 +208,20 @@ INSERT INTO public.games VALUES (1, 1, NULL, 165, NULL);
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.users VALUES (1, 'user_1783083839798');
+INSERT INTO public.users VALUES (1, 'Jasper');
+INSERT INTO public.users VALUES (2, 'user_1783128104471');
+INSERT INTO public.users VALUES (3, 'user_1783128104470');
+INSERT INTO public.users VALUES (4, 'user_1783128196874');
+INSERT INTO public.users VALUES (5, 'user_1783128196873');
+INSERT INTO public.users VALUES (6, 'user_1783128396806');
+INSERT INTO public.users VALUES (7, 'user_1783128396805');
 
 
 --
 -- Name: games_game_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.games_game_id_seq', 1, true);
+SELECT pg_catalog.setval('public.games_game_id_seq', 23, true);
 
 
 --
@@ -209,7 +235,7 @@ SELECT pg_catalog.setval('public.guesses_guess_id_seq', 1, false);
 -- Name: users_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.users_user_id_seq', 1, true);
+SELECT pg_catalog.setval('public.users_user_id_seq', 7, true);
 
 
 --
